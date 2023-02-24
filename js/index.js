@@ -23,7 +23,7 @@ function addStep() {
 
   thirdStep();
 
-  if (counter === 50) {
+  if (counter <= 50) {
     refs.btn.disabled = true;
     refs.btn.textContent = "Доигрался? 😄";
     refs.test.innerHTML = "Ну что получится еще разок?";
