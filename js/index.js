@@ -12,7 +12,11 @@ refs.reset.addEventListener("click", remove);
 
 function add() {
   a += 1;
-  refs.test.innerHTML = `Молодец что нажал ${a} раз `;
+  if (a < 5) {
+    refs.test.innerHTML = `Молодец что нажал ${a} раз `;
+    return
+  }
+  refs.test.innerHTML = `ОГО! Ото у тебя терпение, молодец что нажал ${a} раз `;
   console.log("hello");
 }
 
