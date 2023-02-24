@@ -13,12 +13,12 @@ function addStep() {
   counter += 1;
   if (counter < 10) {
     firstStep();
-      return;
+    return;
   }
 
   if (counter < 25) {
     secondStep();
-    return
+    return;
   }
 
   thirdStep();
@@ -26,25 +26,25 @@ function addStep() {
   if (counter === 50) {
     refs.btn.disabled = true;
     refs.btn.textContent = "Доигрался? 😄";
+    refs.test.innerHTML = "Ну что получится еще разок?";
   }
 }
 
 function firstStep() {
-refs.test.innerHTML = `Молодец что нажал ${counter} раз `;
+  refs.test.innerHTML = `Молодец что нажал ${counter} раз `;
 }
 
 function secondStep() {
-refs.btn.textContent = "может хватит уже??";
-refs.test.innerHTML = ` Это уже не смешно, что ты нажал ${counter} раз `;
-refs.body.style.fontSize = "24px";
+  refs.btn.textContent = "может хватит уже??";
+  refs.test.innerHTML = ` Это уже не смешно, что ты нажал ${counter} раз `;
+  refs.body.style.fontSize = "24px";
 }
 
 function thirdStep() {
-refs.test.innerHTML = `ОГО! Ото у тебя терпение, не каждый может нажать ${counter} раз `;
-console.log("hello");
-refs.body.style.backgroundColor = "red";
-refs.body.style.fontSize = "34px";
-  
+  refs.btn.textContent = "Мне придется принять меры";
+  refs.test.innerHTML = `ОГО! Ото у тебя терпение, не каждый может нажать ${counter} раз `;
+  refs.body.style.backgroundColor = "red";
+  refs.body.style.fontSize = "34px";
 }
 
 function remove() {
@@ -53,5 +53,5 @@ function remove() {
   refs.test.innerHTML = "";
   refs.body.style.backgroundColor = "#fff";
   refs.body.style.fontSize = "14px";
-  refs.btn.textContent = "попробуем снова ";
+  refs.btn.textContent = "click me";
 }
