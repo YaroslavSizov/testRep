@@ -4,12 +4,15 @@ const refs = {
   reset: document.querySelector(".js-reset"),
 };
 
+let a = 0;
+
 refs.btn.addEventListener("click", add);
 
 refs.reset.addEventListener("click", remove);
 
 function add() {
-  refs.test.insertAdjacentHTML("beforeend", "Молодец что нажал)) ");
+  a += 1;
+  refs.test.innerHTML = `Молодец что нажал ${a} раз `;
   console.log("hello");
 }
 
