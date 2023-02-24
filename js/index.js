@@ -29,17 +29,17 @@ function remove() {
   console.log("good bay)");
 }
 
-function first() {
+function firstStep() {
 refs.test.innerHTML = `Молодец что нажал ${a} раз `;
 }
 
-function second() {
+function secondStep() {
 refs.btn.textContent = "может хватит уже??";
 refs.test.innerHTML = ` Это уже не смешно, что ты нажал ${a} раз `;
 refs.body.style.fontSize = "24px";
 }
 
-function third() {
+function thirdStep() {
 refs.test.innerHTML = `ОГО! Ото у тебя терпение, не каждый может нажать ${a} раз `;
 console.log("hello");
 refs.body.style.backgroundColor = "red";
