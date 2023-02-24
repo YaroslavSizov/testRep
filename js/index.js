@@ -1,15 +1,19 @@
-const test = document.querySelector(".js-test");
-const btn = document.querySelector(".js-btn");
-const reset = document.querySelector(".js-reset");
+const refs = {
+  test: document.querySelector(".js-test"),
+  btn: document.querySelector(".js-btn"),
+  reset: document.querySelector(".js-reset"),
+};
 
+refs.btn.addEventListener("click", add);
 
-btn.addEventListener('click', () => {
-    test.insertAdjacentHTML("beforeend", "Молодец что нажал)) ");
-    console.log('hello');
-})
+refs.reset.addEventListener("click", remove);
 
+function add() {
+  refs.test.insertAdjacentHTML("beforeend", "Молодец что нажал)) ");
+  console.log("hello");
+}
 
-reset.addEventListener("click", () => {
-    test.innerHTML = " ";
+function remove() {
+  refs.test.innerHTML = " ";
   console.log("good bay)");
-});
+}
