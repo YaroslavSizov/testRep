@@ -5,43 +5,53 @@ const refs = {
   body: document.querySelector(".body"),
 };
 
-let a = 0;
-refs.btn.addEventListener("click", add);
+let counter = 0;
+refs.btn.addEventListener("click", addStep);
 refs.reset.addEventListener("click", remove);
 
-function add() {
-  a += 1;
-  if (a < 10) {
-    first();
+function addStep() {
+  counter += 1;
+  if (counter < 10) {
+    firstStep();
       return;
   }
 
-  if (a < 20) {
-    second();
+  if (counter < 25) {
+    secondStep();
     return
   }
 
-  third();
-}
+  thirdStep();
 
-function remove() {
-  refs.test.innerHTML = " ";
-  console.log("good bay)");
+  if (counter === 50) {
+    refs.btn.disabled = true;
+    refs.btn.textContent = "Доигрался? 😄";
+  }
 }
 
 function firstStep() {
-refs.test.innerHTML = `Молодец что нажал ${a} раз `;
+refs.test.innerHTML = `Молодец что нажал ${counter} раз `;
 }
 
 function secondStep() {
 refs.btn.textContent = "может хватит уже??";
-refs.test.innerHTML = ` Это уже не смешно, что ты нажал ${a} раз `;
+refs.test.innerHTML = ` Это уже не смешно, что ты нажал ${counter} раз `;
 refs.body.style.fontSize = "24px";
 }
 
 function thirdStep() {
-refs.test.innerHTML = `ОГО! Ото у тебя терпение, не каждый может нажать ${a} раз `;
+refs.test.innerHTML = `ОГО! Ото у тебя терпение, не каждый может нажать ${counter} раз `;
 console.log("hello");
 refs.body.style.backgroundColor = "red";
 refs.body.style.fontSize = "34px";
+  
+}
+
+function remove() {
+  refs.btn.disabled = false;
+  counter = 0;
+  refs.test.innerHTML = "";
+  refs.body.style.backgroundColor = "#fff";
+  refs.body.style.fontSize = "14px";
+  refs.btn.textContent = "попробуем снова ";
 }
