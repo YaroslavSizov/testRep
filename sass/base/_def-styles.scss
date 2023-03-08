@@ -1,0 +1,93 @@
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+
+  // color: ;
+  // background-color: ;
+
+  &.modal-open{
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  margin: 0;
+  padding-left: 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* padding: 0 15px; */
+
+  // outline: 2px solid tomato;
+
+  // @media screen and (min-width: 768px){
+  //   max-width: 768px;
+  // }
+
+  // @media screen and (min-width: 1200px){
+  //   max-width: 1200px;
+  // }
+
+  @media screen and (min-width: 480px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 1200px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  min-height: 100vh;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms ease;
+
+  overflow-y: scroll;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
