@@ -16,17 +16,17 @@ function addStep() {
     return;
   }
 
-  if (counter < 25) {
+  if (counter < 15) {
     secondStep();
     return;
   }
 
   thirdStep();
 
-  if (counter >= 50) {
+  if (counter >= 20) {
     refs.btn.disabled = true;
     refs.btn.textContent = "Доигрался? 😄";
-    refs.test.innerHTML = "Ну что получится еще разок?";
+    refs.test.innerHTML = '<a href="./example.html">ну давай</a>';
   }
 }
 

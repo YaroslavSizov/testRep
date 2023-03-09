@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tags</title>
+</head>
+<body>
+
+    <!-- встроеная модалка -->
+
+        <dialog open>
+        <p>как дела?</p>
+        <div>
+
+            <button>Норм</button>
+
+            <button onclick="document
+            .querySelector('dialog')
+            .close()">Не норм</button>
+        </div>
+    </dialog>
+
+    <!-- выпадающая форма -->
+
+    <section>
+        <details>
+        <summary>нажми и увидишь бонус</summary>
+        <p><a href="https://instagram.com/st._s.v?igshid=YmMyMTA2M2Y=">нажми))</a></p>
+    </details>
+    </section>
+
+    <!-- доп подпись к фото -->
+
+    <section>
+        <figure>
+        <img src="" alt="foto">
+        <figcaption>foto</figcaption>
+    </figure>
+    </section>
+
+    <!-- при наведении выскакивает подсказка -->
+
+    <section>
+        <p title="I am here">наведи на меня</p>
+    </section>
+
+    <!-- ссылка но для для скачивания -->
+
+    <section>
+        <a href="" download="">скачать </a>
+    </section>
+
+    <!-- Текст который ездит -->
+
+    <section>
+        <marquee h1 behavior="" direction="right"><h1 style="color: blueviolet;">Hello World</h1></marquee>
+    </section>
+
+    <style>
+        section{
+        padding: 10px;
+        margin: 10px;
+        outline: 1px solid grey;
+        background-color: rgb(237, 237, 237);
+        border-radius: 5px;
+        }
+    </style>
+</body>
+</html>
