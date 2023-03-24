@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 -->
+
+    <hr />
+    <h4>Пример 1</h4>
+    <hr />
+
+    <nav>
+      <ul class="topmenu">
+        <li><a href="">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li>
+          <a href="" class="down">Blog</a>
+          <ul class="submenu">
+            <li><a href="">Category</a></li>
+            <li><a href="">Author</a></li>
+            <li><a href="">Archive</a></li>
+            <li><a href="">Tags</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="" class="down">Portfolio</a>
+          <ul class="submenu">
+            <li><a href="">Category</a></li>
+            <li><a href="">Author</a></li>
+            <li><a href="">Archive</a></li>
+            <li><a href="">Tags</a></li>
+          </ul>
+        </li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Libre+Baskerville");
+      body {
+        margin: 0;
+        background-image: url(https://html5book.ru/wp-content/uploads/2017/03/dulcineia-dias-195000.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+      }
+      body:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0),
+          rgba(255, 255, 255, 0.8)
+        );
+      }
+      nav {
+        text-align: center;
+        padding: 40px 0 0;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        text-decoration: none;
+        display: block;
+        color: #222;
+      }
+      .topmenu > li {
+        display: inline-block;
+        position: relative;
+      }
+      .topmenu > li > a {
+        position: relative;
+        padding: 10px 15px;
+        font-family: "Kaushan Script", cursive;
+        font-size: 1.5em;
+        line-height: 1;
+        letter-spacing: 3px;
+      }
+      .topmenu > li > a:before {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: 100%;
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        transform: translate(-50%, 20px);
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .topmenu li:hover a:before {
+        transform: translate(-50%, 0);
+        opacity: 1;
+      }
+      .submenu {
+        position: absolute;
+        z-index: 4;
+        left: 50%;
+        top: 100%;
+        width: 150px;
+        padding: 15px 0 15px;
+        margin-top: 5px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-50%, 20px);
+        transition: 0.3s;
+      }
+      .topmenu > li:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      .submenu a {
+        font-family: "Libre Baskerville", serif;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+        transition: 0.3s linear;
+      }
+      .submenu a:hover {
+        background: #e8e8e8;
+      }
+    </style>
+
+    <hr />
+    <h4>Пример 2</h4>
+    <hr />
+    <!-- 2 -->
+
+    <header>
+      <a href="" class="logo">Лого</a>
+      <nav>
+        <ul class="topmenu">
+          <li><a href="">Главная</a></li>
+          <li>
+            <a href="" class="submenu-link">О нас</a>
+            <ul class="submenu">
+              <li><a href="">Производство</a></li>
+              <li><a href="">Магазин</a></li>
+              <li><a href="">Сервис</a></li>
+            </ul>
+          </li>
+          <li><a href="">Проекты</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin-top: 50px;
+        background: #f2f2f2;
+      }
+      header {
+        margin-top: 50px;
+        background: white;
+        text-align: center;
+      }
+      header a {
+        text-decoration: none;
+        outline: none;
+        display: block;
+        transition: 0.3s ease-in-out;
+      }
+      .logo {
+        color: #d5b45b;
+        font-family: "Playfair Display", serif;
+        font-size: 2.5em;
+        padding: 20px 0;
+      }
+      nav {
+        display: table;
+        margin: 0 auto;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .topmenu:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .topmenu > li {
+        width: 25%;
+        float: left;
+        position: relative;
+        font-family: "Open Sans", sans-serif;
+      }
+      .topmenu > li > a {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        color: #404040;
+        padding: 15px 30px;
+      }
+      .topmenu li a:hover {
+        color: #d5b45b;
+      }
+      .submenu-link:after {
+        content: "\f107";
+        font-family: "FontAwesome";
+        color: inherit;
+        margin-left: 10px;
+      }
+      .submenu {
+        background: #273037;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 5;
+        width: 180px;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: 0.5s ease-in-out;
+      }
+      .submenu a {
+        color: white;
+        text-align: left;
+        padding: 12px 15px;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .submenu li:last-child a {
+        border-bottom: none;
+      }
+      .topmenu > li:hover .submenu {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    </style>
+  </body>
+</html>
